@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="container-back">
+    <div class="container-img">
+      <img class="logo" src="../../../assets/logos/logo.svg">
+    </div>
+    <div class="container-form">
+      <div class="form">
+        <mat-card class="card-form">
+          <div class="card-head">
+            <p class="title">Inicia sesión</p>
+            <p class="subtitle">Ingresa tu usuario y contraseña</p>
+          </div>
+          <mat-card-content>
+            <form [formGroup]="formGroup">
+              <mat-form-field class="container-controller" appearance="outline">
+                <mat-label class="title-controller">Email</mat-label>
+                <input class="inp-controller" type="email" matInput formControlName="email">
+                <mat-error *ngIf="formGroup.controls.email.hasError('required')">
+                  El email es <strong>requerido</strong>
+                  <ul>
+                    <li>Debe tener un formato Ex. correo@correo.com</li>
+                  </ul>
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field class="container-controller" appearance="outline">
+                <mat-label class="title-controller">Contraseña</mat-label>
+                <input type="password" matInput formControlName="password">
+                <mat-error *ngIf="formGroup.controls.password.hasError('required')">
+                  La contraseña es <strong>requerida</strong>
+                  <ul>
+                    <li>Debe de incluir al menos una mayúscula</li>
+                    <li>Debe de incluir al menos un número</li>
+                    <li>Debe de incluir al menos un carácter especial</li>
+                    <li>Una longitud mínima de 8</li>
+                  </ul>
+                </mat-error>
+              </mat-form-field>
+            </form>
+            <section class="example-section">
+              <mat-checkbox class="example-margin" [(ngModel)]="checked">Recuérdame</mat-checkbox>
+            </section>
+          </mat-card-content>
+          <div class="container-button">
+            <button class="btn-login" mat-raised-button (click)="login()" *ngIf="formGroup.valid">Iniciar sesión</button>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
