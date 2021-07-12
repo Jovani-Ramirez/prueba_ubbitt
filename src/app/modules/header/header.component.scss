@@ -1,0 +1,54 @@
+$colorPrimario: #ff6f61;
+$colorSecundario: #ffba5f;
+$colorTerciario: #4d4d4d;
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.container-data {
+    width: 95%;
+    margin: 5px auto;
+}
+
+
+.container-options {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+
+.line {
+    width: 1px;
+    height: 25px;
+    margin-right: -10px;
+    background: #ccc;
+}
+
+.menu-logout {
+    margin-left: 20px;
+}
+
+.btn-log {
+    margin-top: -10px;
+}
+
+.icon-p {
+    color: $colorPrimario;
+}
+
+.icon-arrow {
+    color: $colorPrimario;
+}
+
+.container-noti {
+    margin-right: 20px;
+}
+
+.icon-bell {
+    color: $colorPrimario;
+}
