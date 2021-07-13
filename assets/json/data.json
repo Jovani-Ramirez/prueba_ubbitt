@@ -1,0 +1,82 @@
+[
+    {
+        "id": 111,
+        "name": "Jovani",
+        "apellido_m": "Ramirez",
+        "apellid_p": "Sotelo",
+        "email": "correo5@correo.com",
+        "permisos": "Super administrador"
+    },
+    {
+        "id": 112,
+        "name": "Poulette",
+        "apellido_m": "De los santos",
+        "apellid_p": "Martinez",
+        "email": "correo6@correo.com",
+        "permisos": "Team leader"
+    },
+    {
+        "id": 113,
+        "name": "Naomi",
+        "apellido_m": "Ramirez",
+        "apellid_p": "Sotelo",
+        "email": "correo7@correo.com",
+        "permisos": "Agente"
+    },
+    {
+        "id": 114,
+        "name": "Sofia",
+        "apellido_m": "Ramirez",
+        "apellid_p": "Parra",
+        "email": "correo8@correo.com",
+        "permisos": "Tema leader"
+    },
+    {
+        "id": 115,
+        "name": "Lisandro",
+        "apellido_m": "Martinez",
+        "apellid_p": "De los Santos",
+        "email": "correo9@correo.com",
+        "permisos": "Agente"
+    },
+    {
+        "id": 116,
+        "name": "Vanessa",
+        "apellido_m": "Aguilar",
+        "apellid_p": "Rodriguez",
+        "email": "correo10@correo.com",
+        "permisos": "Agente"
+    },
+    {
+        "id": 117,
+        "name": "Sarahi",
+        "apellido_m": "Hernandez",
+        "apellid_p": "Abreu",
+        "email": "correo1@correo.com",
+        "permisos": "Team leader"
+    },
+    {
+        "id": 118,
+        "name": "Jose",
+        "apellido_m": "Larra",
+        "apellid_p": "Gomez",
+        "email": "correo2@correo.com",
+        "permisos": "Super administradorr"
+    },
+    {
+        "id": 119,
+        "name": "Moises",
+        "apellido_m": "Martinez",
+        "apellid_p": "Acosta",
+        "email": "correo3@correo.com",
+        "permisos": "Agente"
+    },
+    {
+        "id": 120,
+        "name": "Javier",
+        "apellido_m": "Torres",
+        "apellid_p": "Gonzales",
+        "email": "correo4@correo.com",
+        "permisos": "Agente"
+    }
+]
