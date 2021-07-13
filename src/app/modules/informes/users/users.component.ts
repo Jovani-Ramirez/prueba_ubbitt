@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -18,7 +18,8 @@ export class UsersComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   constructor(
-    private dataService: DataService
+    private dataService: DataService,
+    private changeDetector: ChangeDetectorRef
   ) {
     this.displayedColumns = ['id','nombre', 'apellido_paterno', 'apellido_materno', 'email', 'permisos', 'actions'];
     this.dataSource = new MatTableDataSource();

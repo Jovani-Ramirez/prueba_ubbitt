@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LoginComponent implements OnInit {
 
@@ -14,7 +16,9 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private router: Router
+    private router: Router,
+    private dataService: DataService,
+    private changeDetector: ChangeDetectorRef
   ) {
 
     this.formGroup = this.formBuilder.group({
@@ -24,11 +28,18 @@ export class LoginComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.dataService.isLogged().subscribe((d: boolean) => {
+      console.log(d);
+      if (d) window.location.replace('/informes');
+      this.changeDetector.detectChanges();
+    });
   }
   
-
   login(): void {
     const data = this.formGroup.value;
-    this.router.navigate(['./informes/home']);
+    localStorage.setItem('token', 'accesso');
+    this.dataService.loggedToggle(true);
+    this.router.navigate(['/informes']);
+    this.changeDetector.detectChanges();
   }
 }

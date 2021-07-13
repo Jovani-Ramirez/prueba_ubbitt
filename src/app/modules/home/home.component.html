@@ -20,14 +20,14 @@
 
     <div class="options-menu">
       <ul class="container-menu">
-        <li class="option"><mat-icon class="logo-menu">summarize</mat-icon> <a href="" class="option-menu">Reportes</a></li>
-        <li class="option"><mat-icon class="logo-menu">watch_later</mat-icon> <a href="" class="option-menu">Historico de llamadas</a></li>
+        <!-- <li class="option"><mat-icon class="logo-menu">summarize</mat-icon> <a href="" class="option-menu">Reportes</a></li>
+        <li class="option"><mat-icon class="logo-menu">watch_later</mat-icon> <a href="" class="option-menu">Historico de llamadas</a></li> -->
         <li class="option"><mat-icon class="logo-menu">person</mat-icon> <a href="informes/users" class="option-menu">Usuarios</a></li>
       </ul>
     </div>
   </mat-drawer>
   <mat-drawer-content>
     <app-header></app-header>
-    <app-users></app-users>
+    <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>

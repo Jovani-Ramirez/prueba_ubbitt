@@ -41,7 +41,7 @@
             </section>
           </mat-card-content>
           <div class="container-button">
-            <button class="btn-login" mat-raised-button (click)="login()" *ngIf="formGroup.valid">Iniciar sesión</button>
+            <button class="btn-login" mat-raised-button (click)="login()" [disabled]="!formGroup.valid">Iniciar sesión</button>
           </div>
         </mat-card>
       </div>

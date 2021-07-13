@@ -1,14 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { DataService } from './services/data.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
-  title = 'ubbitt';
+  public title = 'ubbitt';
+  public logged: boolean;
 
-  constructor() {}
+  constructor(
+    private dataService: DataService,
+    private changeDetector: ChangeDetectorRef
+  ) {
+    this.logged = true;
+  }
+
+  ngOnInit(): void {
+    this.dataService.isLogged().subscribe((d: boolean) => {
+      this.logged = d;
+      this.changeDetector.detectChanges();
+    });
+
+  }
 
 }
