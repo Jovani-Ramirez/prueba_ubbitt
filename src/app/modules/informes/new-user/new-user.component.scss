@@ -1,0 +1,234 @@
+$colorPrimario: #ff6f61;
+$colorSecundario: #ffba5f;
+$colorTerciario: #4d4d4d;
+
+.container {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.head-container {
+  width: 100%;
+  text-align: start;
+}
+
+.title-user {
+  font-size: 25px;
+  color: rgb(215, 215, 215);
+}
+
+.container-data {
+  width: 100%;
+}
+
+.title {
+  width: 100%;
+  text-align: start;
+}
+
+.title-inf {
+  font-size: 14px;
+  color: #000;
+}
+
+.container-form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.form-card {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.form-content {
+  width: 20%;
+  margin: 10px;
+}
+
+.d {
+  color: red;
+}
+
+.txt-info {
+  width: 100%;
+}
+.title-con {
+  width: 100%;
+  text-align: start;
+}
+
+.title-tip {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+}
+
+.tips {
+  width: 100%;
+  margin: 20px auto;
+}
+
+.container-select {
+  width: 100%;
+}
+
+.container-select h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+}
+
+.container-select p {
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: -18px;
+  color: #000;
+}
+
+.container-docs {
+  width: 100%;
+}
+
+.container-docs h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+}
+
+.container-inp-doc {
+  width: 25%;
+  margin: 20px 20px;
+}
+
+.container-button {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.btn-add {
+  width: 30%;
+  margin: 10px;
+  background: $colorPrimario;
+  color: #fff;
+}
+
+.btn-add:hover {
+  width: 30%;
+  margin: 10px;
+  background: #fff;
+  color: $colorPrimario;
+}
+
+.btn-add-cancel {
+  width: 30%;
+  margin: 10px;
+  background: $colorTerciario;
+  color: #fff;
+}
+
+.btn-add-cancel:hover {
+  width: 30%;
+  margin: 10px;
+  background: #fff;
+  color: $colorTerciario;
+}
+
+@media screen and (max-width: 1920px) {
+  .form-content {
+    width: 30%;
+    margin: 10px;
+  }
+
+  .container-inp-doc {
+    width: 30%;
+    margin: 20px 20px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .form-content {
+    width: 30%;
+    margin: 10px;
+  }
+
+  .container-inp-doc {
+    width: 30%;
+    margin: 20px 20px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .form-content {
+    width: 40%;
+    margin: 10px;
+  }
+
+  .container-inp-doc {
+    width: 40%;
+    margin: 20px 20px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .form-content {
+    width: 40%;
+    margin: 10px;
+  }
+
+  .container-inp-doc {
+    width: 40%;
+    margin: 20px 20px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .form-content {
+    width: 45%;
+    margin: 10px;
+  }
+
+  .container-inp-doc {
+    width: 45%;
+    margin: 20px 20px;
+  }
+
+  .container-inp-doc {
+    width: 50%;
+    margin: 20px 20px;
+  }
+
+  .btn-add {
+    width: 50%;
+  }
+
+  .btn-add-cancel {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .form-content {
+    width: 50%;
+    margin: 10px;
+  }
+
+  .container-inp-doc {
+    width: 50%;
+    margin: 20px 20px;
+  }
+
+  .btn-add {
+    width: 50%;
+  }
+
+  .btn-add-cancel {
+    width: 50%;
+  }
+}

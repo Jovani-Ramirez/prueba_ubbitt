@@ -2,20 +2,18 @@
   <div class="container-data">
     <mat-card class="card-m">
       <mat-card-content class="container-options">
-
         <div class="menu-logout">
           <button mat-button [matMenuTriggerFor]="menu" class="btn-log">
             <mat-icon class="icon-p">person_outline</mat-icon>
             <mat-icon class="icon-arrow">keyboard_arrow_down</mat-icon>
           </button>
           <mat-menu #menu="matMenu">
-            <button mat-menu-item (click)="dataService.logout()"><mat-icon>logout</mat-icon> Cerrar sesión</button>
+            <button mat-menu-item (click)="dataService.logout()">
+              <mat-icon>logout</mat-icon> Cerrar sesión
+            </button>
           </mat-menu>
         </div>
-
         <div class="line"></div>
-
-
         <div class="container-noti">
           <mat-icon matBadge="1" matBadgeColor="primary" class="icon-bell">notifications_none</mat-icon>
         </div>

@@ -24,7 +24,6 @@ export class AppComponent implements OnInit {
       this.logged = d;
       this.changeDetector.detectChanges();
     });
-
   }
 
 }

@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
       email: ['', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]],
       password: ['', [Validators.required, Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$')]]
     });
-   }
+  }
 
   ngOnInit(): void {
     this.dataService.isLogged().subscribe((d: boolean) => {
@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
       this.changeDetector.detectChanges();
     });
   }
-  
+
   login(): void {
     const data = this.formGroup.value;
     localStorage.setItem('token', 'accesso');

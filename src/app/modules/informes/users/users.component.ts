@@ -3,6 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { DataService } from '../../../services/data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-users',
@@ -19,9 +20,10 @@ export class UsersComponent implements OnInit {
 
   constructor(
     private dataService: DataService,
-    private changeDetector: ChangeDetectorRef
+    private changeDetector: ChangeDetectorRef,
+    private router: Router
   ) {
-    this.displayedColumns = ['id','nombre', 'apellido_paterno', 'apellido_materno', 'email', 'permisos', 'actions'];
+    this.displayedColumns = ['id', 'nombre', 'apellido_paterno', 'apellido_materno', 'email', 'permisos', 'actions'];
     this.dataSource = new MatTableDataSource();
 
     this.getUsers();
@@ -46,6 +48,10 @@ export class UsersComponent implements OnInit {
       this.dataSource.sort = this.sort;
       this.dataSource.paginator = this.paginator;
     });
+  }
+
+  newUser(): void {
+    this.router.navigate(['informes/new-user']);
   }
 
 }

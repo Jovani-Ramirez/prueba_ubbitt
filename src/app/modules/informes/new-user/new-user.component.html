@@ -1,0 +1,131 @@
+<div class="container">
+  <div class="head-container">
+    <h2 class="title-user">Nuevo usuario</h2>
+  </div>
+  <div class="container-data">
+    <div class="title">
+      <h2 class="title-inf">Datos personales</h2>
+    </div>
+    <div class="container-form">
+      <form [formGroup]="newUser" class="form-card">
+
+        <div class="form-content">
+          <mat-form-field appearance="outline">
+            <input matInput type="text" formControlName="name" placeholder="Nombre">
+            <mat-error *ngIf="newUser.controls.name.hasError('required')">
+              El nombre es <strong>requerido</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-content">
+          <mat-form-field appearance="outline">
+            <input matInput type="text" formControlName="phone" placeholder="Telefono">
+            <mat-error *ngIf="newUser.controls.phone.hasError('required')">
+              El telefono es <strong>requerido</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-content">
+          <mat-form-field appearance="outline">
+            <input matInput type="email" formControlName="email" placeholder="Corrreo">
+            <mat-error *ngIf="newUser.controls.email.hasError('required')">
+              El email es <strong>requerido</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-content">
+          <mat-form-field appearance="outline">
+            <input matInput type="password" formControlName="password" placeholder="Contraseña">
+          </mat-form-field>
+          <small *ngIf="passwordNoValido" class="d">
+            Verfique la contraseña
+            <ul>
+              <li>Debe de incluir al menos una mayúscula</li>
+              <li>Debe de incluir al menos un número</li>
+              <li>Debe de incluir al menos un carácter especial</li>
+              <li>Una longitud mínima de 8 caracteres</li>
+            </ul>
+          </small>
+        </div>
+        <div class="form-content">
+          <mat-form-field appearance="outline">
+            <input matInput type="password" formControlName="password2" placeholder="Confirmar contraseña">
+          </mat-form-field>
+          <small *ngIf="password2NoValido" class="d">
+            Verfique la contraseña
+          </small>
+        </div>
+        <div class="txt-info">
+          <div class="title-con">
+            <h4 class="title-tip">Consejos para contraseña segura</h4>
+          </div>
+          <div class="tips">
+            <ul>
+              <li>Debe de incluir al menos una mayúscula</li>
+              <li>Debe de incluir al menos un número</li>
+              <li>Debe de incluir al menos un carácter especial</li>
+              <li>Una longitud mínima de 8 caracteres</li>
+            </ul>
+          </div>
+        </div>
+        <div class="container-select">
+          <h4>Datos labaroles</h4>
+          <p>Rol / Permisos</p>
+          <mat-form-field appearance="fill">
+            <mat-label>Seleccionar</mat-label>
+            <mat-select formControlName="rol">
+              <mat-option *ngFor="let option of rol" [value]="option.id">{{option.description}}</mat-option>
+            </mat-select>
+            <mat-error *ngIf="newUser.controls.rol.hasError('required')">
+              El tipo de rol es <strong>requerido</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="container-docs">
+          <h4>Documentación</h4>
+        </div>
+        <div class="container-inp-doc">
+          <div class="form-content-doc">
+            <p>*identificacion oficial</p>
+            <div class="inp-doc custom-input-file">
+              <input formControlName="identification" class="input-file" type="file" placeholder="Corrreo"
+                accept="application/pdf">
+            </div>
+          </div>
+        </div>
+        <div class="container-inp-doc">
+          <div class="form-content-doc">
+            <p>*Comprobante de domicilio</p>
+            <div class="inp-doc">
+              <input formControlName="v_address" class="border" type="file" placeholder="Corrreo"
+                accept="application/pdf">
+            </div>
+          </div>
+        </div>
+        <div class="container-inp-doc">
+          <div class="form-content-doc">
+            <p>*Acta de nacimiento</p>
+            <div class="inp-doc">
+              <input formControlName="c_birth" class="border" type="file" placeholder="Corrreo"
+                accept="application/pdf">
+            </div>
+          </div>
+        </div>
+        <div class="container-inp-doc">
+          <div class="form-content-doc">
+            <p>*Contarto laboral</p>
+            <div class="inp-doc">
+              <input formControlName="contract" class="border" type="file" placeholder="Corrreo"
+                accept="application/pdf">
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="container-button">
+        <button class="btn-add" mat-raised-button (click)="addUser()" [disabled]="!newUser.valid">Registar
+          usuario</button>
+        <button class="btn-add-cancel" mat-raised-button>Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>

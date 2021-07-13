@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { FormGroup } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -33,5 +34,19 @@ export class DataService {
 
   getUSers() {
     return this.http.get('../../assets/json/data.json');
+  }
+
+  passwordsIguales(password1Name: string, password2Name: string) {
+
+    return (formGroup: FormGroup) => {
+      const password1Control = formGroup.controls[password1Name];
+      const password2Control = formGroup.controls[password2Name];
+
+      if (password1Control.value === password2Control.value) {
+        password2Control.setErrors(null);
+      } else {
+        password2Control.setErrors({ noEsIgual: true });
+      }
+    };
   }
 }
